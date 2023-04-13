@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g2.movieverse.MainMenuController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-border-color: black; -fx-background-color: #c9e7ff;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onSearchButtonPressed" prefWidth="100.0" text="Search">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onCollectionButtonPressed" prefWidth="100.0" text="Collections">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onFriendButtonPressed" prefWidth="100.0" text="Friends">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onLogout" prefWidth="100.0" text="Logout">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <ScrollPane prefHeight="505.0" prefWidth="551.0">
+         <content>
+            <VBox prefHeight="500.0" prefWidth="550.0" style="-fx-background-color: #def0ff; -fx-border-color: black;">
+               <children>
+                  <Label fx:id="welcomeBackLabel" text="Welcome Back:">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="recommendedText" text="Based on your preference for " />
+                  <ScrollPane fx:id="recomendedPane" prefHeight="92.0" prefWidth="548.0">
+                     <content>
+                        <GridPane fx:id="recomendedGpane" prefHeight="90.0" prefWidth="531.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+                  <Label text="Top releases this month" />
+                  <ScrollPane fx:id="releasePane" prefHeight="83.0" prefWidth="548.0">
+                     <content>
+                        <GridPane fx:id="releaseGpane" prefHeight="90.0" prefWidth="530.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+                  <Label text="Top movies in the last 90 days" />
+                  <ScrollPane fx:id="topMoviesPane" prefHeight="91.0" prefWidth="548.0">
+                     <content>
+                        <GridPane fx:id="topMoviesGpane" prefHeight="90.0" prefWidth="532.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+                  <Label text="Popular with your friends" />
+                  <ScrollPane fx:id="friendsMoviesPane" prefHeight="93.0" prefWidth="548.0">
+                     <content>
+                        <GridPane fx:id="friendsMoviesGpane" prefHeight="90.0" prefWidth="544.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+                  <Label fx:id="recommendedText1" text="Your Top 10 Movies" />
+                  <ScrollPane fx:id="recomendedPane1" prefHeight="92.0" prefWidth="548.0">
+                     <content>
+                        <GridPane fx:id="top10Pane" prefHeight="90.0" prefWidth="531.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <VBox alignment="TOP_CENTER" maxWidth="700.0" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: #def0ff; -fx-border-color: black;">
+         <children>
+            <Text fx:id="followersText" strokeType="OUTSIDE" strokeWidth="0.0" text="Followers:" />
+            <Text fx:id="followingText" strokeType="OUTSIDE" strokeWidth="0.0" text="Following:" />
+            <Text layoutX="58.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="collectionsNumber" layoutX="85.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Collections:" />
+            <Text layoutX="85.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <ScrollPane fx:id="friendsPane" prefHeight="500.0" prefWidth="200.0">
+               <content>
+                  <VBox fx:id="friendsVbox" prefHeight="421.0" prefWidth="146.0" />
+               </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets top="25.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>

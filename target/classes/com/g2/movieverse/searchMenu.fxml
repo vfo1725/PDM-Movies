@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g2.movieverse.SearchMenuController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #def0ff;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search:">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <TextField fx:id="searchField" onAction="#onSearchButtonPressed" prefWidth="500.0" promptText="Type movie here">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#onSearchButtonPressed" text="Search">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onBackButtonPressed" text="Go Back">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="50.0" style="-fx-border-color: #434343; -fx-background-color: #def0ff;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search By:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="searchByNameButton" mnemonicParsing="false" selected="true" text="Name">
+               <toggleGroup>
+                  <ToggleGroup fx:id="searchOptions" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="searchByGenreButton" mnemonicParsing="false" text="Genre" toggleGroup="$searchOptions" />
+            <RadioButton fx:id="searchByStudioButton" mnemonicParsing="false" text="Studio" toggleGroup="$searchOptions" />
+            <RadioButton fx:id="searchByDirectorButton" mnemonicParsing="false" text="Director" toggleGroup="$searchOptions" />
+            <RadioButton fx:id="searchByCastMemberButton" mnemonicParsing="false" text="Cast Member" toggleGroup="$searchOptions" />
+            <RadioButton fx:id="searchByReleaseDateButton" mnemonicParsing="false" text="Release Date" toggleGroup="$searchOptions" />
+         </children>
+      </HBox>
+      <HBox prefHeight="400.0" prefWidth="800.0">
+         <children>
+            <VBox alignment="BASELINE_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" style="-fx-border-color: #434343; -fx-border-width: 2; -fx-background-color: #def0ff;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Filter By">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <RadioButton fx:id="movieNameFilter" mnemonicParsing="false" selected="true" text="Movie Name">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="filters" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="studioFilter" mnemonicParsing="false" text="Studio" toggleGroup="$filters" />
+                  <RadioButton fx:id="genreFilter" mnemonicParsing="false" text="Genre" toggleGroup="$filters" />
+                  <RadioButton fx:id="yearFilter" mnemonicParsing="false" text="Year Released" toggleGroup="$filters" />
+                  <Label text="Order">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="ascendingButton" mnemonicParsing="false" selected="true" text="Ascending">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="order" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="descendingButton" mnemonicParsing="false" text="Descending" toggleGroup="$order" />
+               </children>
+            </VBox>
+            <ScrollPane prefHeight="350.0" prefWidth="700.0">
+               <content>
+                  <GridPane fx:id="results" gridLinesVisible="true" maxWidth="683.0" prefHeight="400.0" prefWidth="700.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

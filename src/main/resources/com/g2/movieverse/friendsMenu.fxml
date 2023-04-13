@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #def0ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g2.movieverse.FriendMenuController">
+   <children>
+      <Text layoutX="86.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add A Friend:">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="86.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friend's Username:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="followerField" layoutX="86.0" layoutY="198.0" prefHeight="25.0" prefWidth="381.0" />
+      <Button fx:id="addFollowerButton" layoutX="104.0" layoutY="281.0" mnemonicParsing="false" onAction="#onAddFollowingPressed" text="Add Follower">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeFollowerButton" layoutX="301.0" layoutY="281.0" mnemonicParsing="false" onAction="#onRemoveFollowingPressed" text="Remove Follower">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="numFollowers" layoutX="151.0" layoutY="345.0" prefHeight="32.0" prefWidth="251.0" />
+      <TextField fx:id="numFollowees" layoutX="151.0" layoutY="392.0" prefHeight="32.0" prefWidth="251.0" />
+      <ScrollPane fx:id="friendsScrollPane" layoutX="571.0" layoutY="41.0" prefHeight="459.0" prefWidth="229.0">
+         <content>
+            <VBox fx:id="friendsPane" prefHeight="509.0" prefWidth="211.0" />
+         </content>
+      </ScrollPane>
+      <Text layoutX="647.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friends">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <VBox layoutX="9.0" layoutY="6.0" prefHeight="200.0" prefWidth="100.0" />
+      <Button fx:id="goBackButton" layoutX="14.0" layoutY="446.0" mnemonicParsing="false" onAction="#onBackButtonPressed" text="Go Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="275.0" prefWidth="383.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g2.movieverse.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Text nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Login to MovieVerse!" />
+   <Text nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
+   <TextField fx:id="usernameField" />
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+   <TextField fx:id="passwordField" onAction="#onLoginButtonPressed" />
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+      <children>
+         <Button fx:id="createAccountButton" onAction="#onCreateAccountButtonPressed" text="Create Account" />
+          <Button fx:id="loginButton" onAction="#onLoginButtonPressed" text="Login" />
+      </children>
+   </HBox>
+</VBox>
